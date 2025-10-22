@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ecovibe Nature</title>
+  <title>Ecovibe Nature - Produtos Sustentáveis e Ecológicos</title>
+  <meta name="description" content="Ecovibe Nature: Descubra produtos sustentáveis e ecológicos que unem design moderno e respeito pelo meio ambiente. Viva uma vida mais verde!">
+  <meta name="keywords" content="Ecovibe, produtos sustentáveis, produtos ecológicos, sustentabilidade, meio ambiente, vida verde">
   <style>
     body {
       margin: 0;
@@ -23,7 +25,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 1rem 2rem; /* Ajustado para evitar corte em telas menores */
+      flex-wrap: wrap; /* Permite que os itens do cabeçalho quebrem a linha */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
     }
@@ -37,6 +40,7 @@
       color: white;
       text-decoration: none;
       margin-left: 1.5rem;
+      white-space: nowrap; /* Evita quebra de linha em links de navegação */
       font-weight: 500;
       transition: 0.3s;
     }
@@ -49,6 +53,9 @@
       padding-top: 100px;
       text-align: center;
       padding-bottom: 3rem;
+      background: url('hero_background.png') no-repeat center center/cover;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
 
     .hero h2 {
@@ -79,66 +86,73 @@
       transform: scale(1.05);
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
+    footer {
+      background: #0f8c4c;
+      color: white;
       text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .product {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      transition: 0.3s;
-      cursor: pointer;
+    .social-links a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
     }
 
-    .product:hover {
-      transform: translateY(-5px);
+    .social-links a:hover {
+      color: #b6ffd1;
     }
 
-    .product img {
-      width: 100%;
-      border-radius: 20px;
+    /* Estilos para as novas seções */
+    .section-padding {
+      padding: 3rem 1rem;
     }
 
-    .product h3 {
-      margin-top: 1rem;
+    .section-bg-light {
+      background: #f2fff4;
+    }
+
+    .section-bg-green-light {
+      background: #e0ffe0;
+    }
+
+    .section-title {
+      color: #0f8c4c;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-text {
+      max-width: 800px;
+      margin: 1rem auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      font-size: 1.1rem;
       color: #0f8c4c;
     }
 
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      justify-content: center;
-      align-items: center;
+    .testimonial-author {
+      font-weight: bold;
+      color: #1f1f1f;
+      margin-top: 0.5rem;
     }
 
-    .modal-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 400px;
+    .environmental-phrase h3 {
+      color: #0f8c4c;
+      font-size: 1.8rem;
     }
 
-    .close {
-      float: right;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: #333;
-    }
-
-    form {
+    .contact-form {
       display: flex;
       flex-direction: column;
       max-width: 400px;
@@ -146,19 +160,11 @@
       gap: 1rem;
     }
 
-    input, textarea {
+    .contact-form input, .contact-form textarea {
       padding: 0.8rem;
       border-radius: 10px;
       border: 1px solid #ccc;
       font-size: 1rem;
-    }
-
-    footer {
-      background: #0f8c4c;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
     }
   </style>
 </head>
@@ -167,47 +173,71 @@
     <h1>Ecovibe Nature</h1>
     <nav>
       <a href="#inicio">Início</a>
-      <a href="#produtos">Produtos</a>
+      <a href="#sobre-nos">Sobre Nós</a>
+      <a href="products.html">Produtos</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <section class="hero" id="inicio">
     <h2>Transforme seu estilo de vida com a Ecovibe Nature</h2>
-    <p>Produtos ecológicos que unem sustentabilidade e design moderno. Sinta a vibração verde em cada detalhe!</p>
-    <button class="btn">Conheça nossos produtos</button>
+    <p>Um produto sustentável é aquele que tem seu ciclo de vida — desde a obtenção da matéria-prima até o descarte final — planejado para gerar o mínimo de impacto negativo possível no meio ambiente, na sociedade e na economia. A sustentabilidade é garantida por um conjunto de características e práticas responsáveis em todas as etapas.</p>
+    <p><b>Principais características de um produto sustentável</b></p>
+    <ul>
+      <li><b>Matérias-primas Renováveis:</b> São usadas matérias-primas que se regeneram mais rapidamente do que são consumidas, como bambu, cânhamo ou algodão orgânico.</li>
+      <li><b>Matérias-primas Recicladas:</b> O uso de materiais já existentes reduz a necessidade de extrair novos recursos e diminui o volume de lixo em aterros sanitários.</li>
+      <li><b>Matérias-primas Biodegradáveis:</b> O produto se decompõe naturalmente e de forma inofensiva ao meio ambiente após o descarte.</li>
+    </ul>
+    <p><b>Produção:</b></p>
+    <ul>
+      <li><b>Ecoeficiente:</b> A fabricação otimiza o uso de recursos como água e energia, adotando tecnologias limpas para minimizar o desperdício e a poluição.</li>
+      <li><b>Ética:</b> São garantidas condições de trabalho seguras e justas, respeitando os direitos dos trabalhadores em toda a cadeia produtiva.</li>
+    </ul>
+    <p><b>Uso e descarte:</b></p>
+    <ul>
+      <li><b>Durabilidade:</b> Produtos de alta qualidade e com vida útil longa reduzem o consumo excessivo e a geração de resíduos.</li>
+      <li><b>Economia de recursos:</b> Itens que demandam menos energia ou água durante o uso contribuem para a eficiência dos recursos.</li>
+      <li><b>Descarte adequado:</b> O produto e sua embalagem são pensados para serem facilmente reciclados, reutilizados ou compostados no fim da vida útil.</li>
+    </ul>
+    <p><b>Certificações:</b></p>
+    <ul>
+      <li><b>Selo FSC:</b> Garante que a madeira e o papel usados vêm de florestas manejadas de forma sustentável.</li>
+      <li>Outras certificações ambientais confiáveis atestam que o produto cumpre critérios específicos de sustentabilidade.</li>
+    </ul>
+    <p><b>O ciclo de vida na prática</b></p>
+    <p>Para entender o que é um produto sustentável, é preciso analisar todas as suas fases:</p>
+    <ul>
+      <li><b>Extração:</b> Uso de matérias-primas renováveis ou recicladas.</li>
+      <li><b>Produção:</b> Otimização dos processos, uso de energia limpa e garantia de direitos trabalhistas.</li>
+      <li><b>Distribuição:</b> Escolha de embalagens recicláveis e redução da pegada de carbono no transporte.</li>
+      <li><b>Uso:</b> Produto durável e que exige menos recursos para funcionar.</li>
+      <li><b>Descarte:</b> Facilitar a reutilização, reciclagem ou compostagem do material.</li>
+    </ul>
+    <a href="products.html" class="btn">Conheça nossos produtos</a>
   </section>
 
-  <section id="produtos" class="products">
-    <div class="product" onclick="openModal('Garrafa Ecológica')">
-      <img src="garrafa_ecologica.png" alt="Garrafa Ecológica">
-      <h3>Garrafa Ecológica</h3>
-      <p>Feita de bambu e vidro reciclado.</p>
-    </div>
-    <div class="product" onclick="openModal('Ecobag Sustentável')">
-      <img src="ecobag_sustentavel.png" alt="Ecobag Sustentável">
-      <h3>Ecobag Sustentável</h3>
-      <p>Perfeita para o seu dia a dia consciente.</p>
-    </div>
-    <div class="product" onclick="openModal('Kit Banho Natural')">
-      <img src="kit_banho_natural.png" alt="Kit Banho Natural">
-      <h3>Kit Banho Natural</h3>
-      <p>Sabonetes e esponjas 100% orgânicos.</p>
-    </div>
+  <section id="sobre-nos" class="section-padding section-bg-light">
+    <h2 class="section-title">Sobre a Ecovibe Nature</h2>
+    <p class="section-text">
+      Na Ecovibe Nature, nossa <b>missão</b> é inspirar e capacitar indivíduos a viverem de forma mais sustentável, oferecendo produtos ecológicos que combinam funcionalidade, design moderno e respeito profundo pelo planeta. Acreditamos que pequenas escolhas diárias podem gerar um grande impacto positivo no meio ambiente.
+    </p>
+    <p class="section-text">
+      Nossos <b>valores</b> são fundamentados na transparência, inovação sustentável e responsabilidade social. Buscamos constantemente por matérias-primas renováveis, processos de produção ecoeficientes e parcerias que compartilham de nossa visão de um futuro mais verde. Cada produto Ecovibe Nature é um passo em direção a um mundo mais equilibrado e consciente.
+    </p>
   </section>
 
-  <div id="productModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <p>Produto incrível que reflete o compromisso da Ecovibe Nature com o planeta.</p>
-      <button class="btn" onclick="closeModal()">Fechar</button>
-    </div>
-  </div>
+  <section class="section-padding section-bg-green-light">
+    <p class="testimonial-text">"Os produtos da Ecovibe Nature transformaram minha rotina! Qualidade impecável e o compromisso com o meio ambiente é inspirador."</p>
+    <p class="testimonial-author">- Ana Clara S.</p>
+  </section>
 
-  <section id="contato">
-    <h2 style="text-align:center; color:#0f8c4c;">Entre em contato</h2>
-    <form onsubmit="enviarFormulario(event)">
+  <section class="section-padding section-bg-light environmental-phrase">
+    <h3 class="section-title">"Cuidar do nosso planeta é cuidar do nosso futuro."</h3>
+  </section>
+
+  <section id="contato" class="section-padding">
+    <h2 class="section-title">Entre em contato</h2>
+    <form onsubmit="enviarFormulario(event)" class="contact-form">
       <input type="text" placeholder="Seu nome" required />
       <input type="email" placeholder="Seu e-mail" required />
       <textarea placeholder="Sua mensagem" rows="4" required></textarea>
@@ -216,24 +246,20 @@
   </section>
 
   <footer>
+    <p>Contato: <a href="mailto:contato@ecovibenature.com" style="color: white;">contato@ecovibenature.com</a></p>
+    <div class="social-links">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">TikTok</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
     <p>© 2025 Ecovibe Nature. Todos os direitos reservados.</p>
   </footer>
 
   <script>
-    function openModal(productName) {
-      document.getElementById('modalTitle').innerText = productName;
-      document.getElementById('productModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('productModal').style.display = 'none';
-    }
-
     function enviarFormulario(event) {
       event.preventDefault();
-      alert('Mensagem enviada com sucesso! Obrigado por entrar em contato.');
+      alert("Mensagem enviada com sucesso! Obrigado por entrar em contato.");
     }
   </script>
 </body>
 </html>
-
