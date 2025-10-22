@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Produtos — Ecovibe Nature</title>
+<style>
+  *{box-sizing:border-box}
+  body{font-family:Inter, system-ui, Arial;margin:0;background:#f7fff8;color:#033}
+  header{position:fixed;left:0;right:0;top:0;background:#0f8c4c;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;z-index:100}
+  main{padding:110px 1rem 2rem;max-width:1100px;margin:0 auto}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+  .card{background:#fff;padding:0.8rem;border-radius:12px;box-shadow:0 8px 20px rgba(10,10,10,0.06);display:flex;flex-direction:column}
+  .card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+  .meta{display:flex;justify-content:space-between;align-items:center;margin-top:0.6rem}
+  .price{color:#0f8c4c;font-weight:800}
+  .buy{background:#16a34a;color:#fff;padding:0.5rem 0.8rem;border-radius:8px;border:none;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+  <div><strong>Ecovibe Nature</strong></div>
+  <nav><a href="index.html" style="color:#fff;text-decoration:none;margin-right:0.8rem">Início</a><a href="produtos.html" style="color:#fff;text-decoration:none">Produtos</a></nav>
+</header>
+<main>
+  <h1 style="color:#0f8c4c">Catálogo de Produtos</h1>
+  <p>Escolha produtos sustentáveis pensados para o seu dia a dia.</p>
+  <div class="grid">
+  <article class="card">
+    <img src="assets/garrafa.svg" alt="Garrafa Ecológica">
+    <h3 style="margin:0.6rem 0 0">Garrafa Ecológica</h3>
+    <p style="margin:0.3rem 0;color:#444">Feita de bambu e vidro reciclado.</p>
+    <div class="meta"><div class="price">R$49,90</div><button class="buy" onclick="alert('Adicionado: Garrafa Ecológica')">Adicionar</button></div>
+  </article>
+  <article class="card">
+    <img src="assets/ecobag.svg" alt="Ecobag Sustentável">
+    <h3 style="margin:0.6rem 0 0">Ecobag Sustentável</h3>
+    <p style="margin:0.3rem 0;color:#444">Perfeita para o seu dia a dia consciente.</p>
+    <div class="meta"><div class="price">R$29,90</div><button class="buy" onclick="alert('Adicionado: Ecobag Sustentável')">Adicionar</button></div>
+  </article>
+  <article class="card">
+    <img src="assets/kitbanho.svg" alt="Kit Banho Natural">
+    <h3 style="margin:0.6rem 0 0">Kit Banho Natural</h3>
+    <p style="margin:0.3rem 0;color:#444">Sabonetes e esponjas 100% orgânicos.</p>
+    <div class="meta"><div class="price">R$79,90</div><button class="buy" onclick="alert('Adicionado: Kit Banho Natural')">Adicionar</button></div>
+  </article>
+  <article class="card">
+    <img src="assets/squeeze.svg" alt="Squeeze Isotérmico">
+    <h3 style="margin:0.6rem 0 0">Squeeze Isotérmico</h3>
+    <p style="margin:0.3rem 0;color:#444">Mantém sua bebida fresca por horas.</p>
+    <div class="meta"><div class="price">R$59,90</div><button class="buy" onclick="alert('Adicionado: Squeeze Isotérmico')">Adicionar</button></div>
+  </article>
+  <article class="card">
+    <img src="assets/talheres.svg" alt="Talheres Reutilizáveis">
+    <h3 style="margin:0.6rem 0 0">Talheres Reutilizáveis</h3>
+    <p style="margin:0.3rem 0;color:#444">Práticos para levar na bolsa ou mochila.</p>
+    <div class="meta"><div class="price">R$19,90</div><button class="buy" onclick="alert('Adicionado: Talheres Reutilizáveis')">Adicionar</button></div>
+  </article>
+  <article class="card">
+    <img src="assets/copo.svg" alt="Copo Dobrável">
+    <h3 style="margin:0.6rem 0 0">Copo Dobrável</h3>
+    <p style="margin:0.3rem 0;color:#444">Compacto e fácil de limpar.</p>
+    <div class="meta"><div class="price">R$24,90</div><button class="buy" onclick="alert('Adicionado: Copo Dobrável')">Adicionar</button></div>
+  </article>
+
+  </div>
+</main>
+</body>
+</html>
